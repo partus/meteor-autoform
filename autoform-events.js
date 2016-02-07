@@ -406,7 +406,8 @@ Template.autoForm.events({
     keyVal = key + '___' + keyVal;
 
     if (keyVal === lastKeyVal) {
-      return;
+      // In case of return, update  will not happen, if two different documents are consequently modifyed to the same value of of the field using the same form   
+      //return;
     }
     lastKeyVal = keyVal;
 
